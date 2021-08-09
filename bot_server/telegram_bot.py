@@ -2,7 +2,6 @@ import logging
 import random
 from telegram import *
 from telegram.ext import *
-import time
 
 API_KEY = '1934407070:AAHYR-4tHwwm7Abtt-ZSWsXQ1QxWGbfab2E'
 FAT_COUNT = 0
@@ -72,7 +71,7 @@ def button(update: Update, context: CallbackContext) -> None:
     else:
         text = "I don't know any responses for that. If you're interested in yo mama jokes tell me fat, stupid or dumb."
 
-    result_text = text + "\n\nUse /start for more Jokes\nUse /help for Help"
+    result_text = text + "\n\nUse /start for more Jokes\n\nUse /help for Help"
     query.edit_message_text(result_text)
 
 
@@ -97,5 +96,5 @@ def main() -> None:
     # SIGTERM or SIGABRT
     updater.idle()
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()
